@@ -14,7 +14,11 @@ namespace ToDoApp.Droid
 {
 	
 	
+<<<<<<< HEAD
 	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.2.0.99")]
+=======
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.2.1.111")]
+>>>>>>> b569277594555d6aae5abdac9c06159c54d259ea
 	public partial class Resource
 	{
 		
