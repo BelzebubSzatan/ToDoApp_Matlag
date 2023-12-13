@@ -30,14 +30,14 @@ namespace ToDoApp
             Add.Clicked -= Add_Clicked;
             Add.Clicked += Edit_Clicked;
             Add.Text = "Edytuj";
+            Add.BackgroundColor = Color.Aqua;
+            Title = "Edit Page";
         }
         private async void Edit_Clicked(object sender, EventArgs e)
         {
             taskModel.Title = TitleEntry.Text;
             if (IsImportant.IsChecked)
-            {
                 taskModel.Importance = "Ważne";
-            }
             else
                 taskModel.Importance = "";
 
@@ -51,9 +51,7 @@ namespace ToDoApp
             task.ID = Guid.NewGuid();
             task.Title = TitleEntry.Text;
             if (IsImportant.IsChecked)
-            {
                 task.Importance = "Ważne";
-            }
             else
                 task.Importance = "";
             list.Add(task);
