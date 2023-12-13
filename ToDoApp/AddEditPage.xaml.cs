@@ -31,6 +31,7 @@ namespace ToDoApp
             else
                 task.Importance = "";
             list.Add(task);
+            Navigation.PopToRootAsync();
         }
     }
 }
