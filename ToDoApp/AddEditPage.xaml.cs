@@ -19,7 +19,7 @@ namespace ToDoApp
             list = _list;
         }
 
-        private void Add_Clicked(object sender, EventArgs e)
+        private async void Add_Clicked(object sender, EventArgs e)
         {
             TaskModel task = new TaskModel();
             task.ID = Guid.NewGuid();
@@ -31,6 +31,9 @@ namespace ToDoApp
             else
                 task.Importance = "";
             list.Add(task);
+
+            JSON.JSONHandling.WriteToFile(list);
+            await Navigation.PopToRootAsync();
         }
     }
 }

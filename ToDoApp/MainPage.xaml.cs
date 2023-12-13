@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using ToDoApp.Model;
 using Xamarin.Forms;
-
 namespace ToDoApp
 {
     public partial class MainPage : ContentPage
@@ -15,15 +14,15 @@ namespace ToDoApp
         public MainPage()
         {
             InitializeComponent();
-            tasks.Add(new TaskModel()
-            {
-                ID=Guid.NewGuid(),
-                Title="123",
-                Importance="Ważne",
-            });
+            tasks = JSON.JSONHandling.GetFromFile();
+            TasksList.ItemsSource=tasks;
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            tasks = JSON.JSONHandling.GetFromFile();
             TasksList.ItemsSource = tasks;
         }
-
         private void Add_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new AddEditPage(tasks));
