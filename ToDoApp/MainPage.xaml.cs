@@ -43,7 +43,6 @@ namespace ToDoApp
                 tasks= JSON.JSONHandling.GetFromFile();
                 TasksList.ItemsSource = tasks;
             }
-
         }
     }
 }

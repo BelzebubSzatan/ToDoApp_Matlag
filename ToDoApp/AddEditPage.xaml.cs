@@ -25,7 +25,7 @@ namespace ToDoApp
             this.list = list;
             taskModel=model;
             TitleEntry.Text = taskModel.Title;
-            IsImportant.IsChecked=taskModel.Image==""?false:true;
+            IsImportant.IsChecked=taskModel.Importance==""?false:true;
 
             Add.Clicked -= Add_Clicked;
             Add.Clicked += Edit_Clicked;

@@ -9,7 +9,7 @@ namespace ToDoApp.JSON
 {
     public static class JSONHandling
     {
-        static string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "baza.json");
+        static string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "baza2.json");
         public static void WriteToFile(List<TaskModel> list)
         {
             if (!File.Exists(path))
