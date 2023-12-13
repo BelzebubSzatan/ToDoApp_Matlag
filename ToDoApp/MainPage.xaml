@@ -7,8 +7,12 @@
         <FlexLayout>
             <Button x:Name="Add" Text="Dodaj"
                     Clicked="Add_Clicked"/>
+
             <Button x:Name="Edit" Text="Edytuj" Clicked="Edit_Clicked"/>
-            <Button x:Name="Delete" Text="Usuń"/>
+         
+      
+            <Button x:Name="Delete" Text="Usuń"
+                    Clicked="Delete_Clicked"/>
         </FlexLayout>
         <ListView x:Name="TasksList">
             <ListView.ItemTemplate>
