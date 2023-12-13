@@ -15,7 +15,7 @@ namespace ToDoApp
         {
             InitializeComponent();
             tasks = JSON.JSONHandling.GetFromFile();
-            TasksList.ItemsSource=tasks;
+            TasksList.ItemsSource = tasks;
         }
         protected override void OnAppearing()
         {
@@ -26,6 +26,12 @@ namespace ToDoApp
         private void Add_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new AddEditPage(tasks));
+        }
+
+        private void Edit_Clicked(object sender, EventArgs e)
+        {
+            if (TasksList.SelectedItem is TaskModel model)
+                Navigation.PushAsync(new AddEditPage(tasks, model));
         }
     }
 }
