@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoApp.AddEditPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Tytul"
+                   x:Name="TitleEntry"/>
+            <Label Text="Ważny"/>
+            <CheckBox x:Name="IsImportant"/>
+            <Button Text="Dodaj"
+                    x:Name="Add"
+                    Clicked="Add_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

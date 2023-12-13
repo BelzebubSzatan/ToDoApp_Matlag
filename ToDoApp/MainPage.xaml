@@ -5,7 +5,8 @@
 
     <StackLayout>
         <FlexLayout>
-            <Button x:Name="Add" Text="Dodaj"/>
+            <Button x:Name="Add" Text="Dodaj"
+                    Clicked="Add_Clicked"/>
             <Button x:Name="Edit" Text="Edytuj"/>
             <Button x:Name="Delete" Text="Usuń"/>
         </FlexLayout>

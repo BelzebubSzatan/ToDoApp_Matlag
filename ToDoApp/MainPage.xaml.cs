@@ -23,5 +23,10 @@ namespace ToDoApp
             });
             TasksList.ItemsSource = tasks;
         }
+
+        private void Add_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AddEditPage(tasks));
+        }
     }
 }
