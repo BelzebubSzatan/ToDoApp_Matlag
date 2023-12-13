@@ -1,18 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ToDoApp.MainPage">
+             x:Class="ToDoApp.MainPage"
+             Title="ToDoList">
 
     <StackLayout>
-        <FlexLayout>
+        <FlexLayout JustifyContent="SpaceEvenly"
+                    Margin="0,10,0,0">
             <Button x:Name="Add" Text="Dodaj"
-                    Clicked="Add_Clicked"/>
-
-            <Button x:Name="Edit" Text="Edytuj" Clicked="Edit_Clicked"/>
-         
-      
-            <Button x:Name="Delete" Text="Usuń"
-                    Clicked="Delete_Clicked"/>
+                    Clicked="Add_Clicked"
+                    BackgroundColor="GreenYellow"/>
+            <Button x:Name="Edit" Text="Edytuj" 
+                    Clicked="Edit_Clicked"
+                    BackgroundColor="Aqua"/>
+            <Button x:Name="Delete" 
+                    Text="Usuń"
+                    Clicked="Delete_Clicked"
+                    BackgroundColor="Red"/>
         </FlexLayout>
         <ListView x:Name="TasksList">
             <ListView.ItemTemplate>
